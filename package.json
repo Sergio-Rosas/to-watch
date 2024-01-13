@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://sergio-rosas.github.io/to-watch",
+  "homepage": "http://sergio-rosas.github.io/to-watch",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
