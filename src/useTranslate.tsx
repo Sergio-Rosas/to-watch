@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-export function useTranslate(text) {
+export function useTranslate(text: string) {
     const [translated, setTranslated] = useState("");
     const [isLoading, setIsLoading] = useState(false);
 

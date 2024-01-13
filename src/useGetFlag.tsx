@@ -29,8 +29,3 @@ export function useGetFlag() {
 
     return [flagsData, isLoading];
 }
-
-var requestOptions = {
-  method: 'GET',
-  redirect: 'follow'
-};

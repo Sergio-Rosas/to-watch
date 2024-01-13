@@ -1,12 +1,11 @@
 import Movie from "./Movie";
 import {useMovies} from "./useMovies";
 import {useState} from "react";
-import ImageExpanded from "./ImageExpanded";
 
 export default function Movies() {
     const [movies, isLoading] = useMovies();
-    const [isShowing, setIsShowing] = useState(false);
-    const [posterImage, setPosterImage] = useState("");
+    const [_isShowing, setIsShowing] = useState(false);
+    const [_posterImage, setPosterImage] = useState("");
 
     return (
         <main>
@@ -16,7 +15,7 @@ export default function Movies() {
                     <>
                         <h1>🎥 Para Ver</h1>
                         <section className="content">
-                            {movies.map((movie) => <Movie movie={movie} isShowing={setIsShowing} posterImage={setPosterImage} key={movie.imdbID}/>)}
+                            {movies instanceof Array && movies.map((movie) => <Movie movie={movie} isShowing={setIsShowing} posterImage={setPosterImage} key={movie.imdbID}/>)}
                         </section>
                         {/*
                             {isShowing && <ImageExpanded>

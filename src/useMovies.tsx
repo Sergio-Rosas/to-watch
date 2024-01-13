@@ -28,7 +28,7 @@ const ids = [
 
 export function useMovies() {
     const [isLoading, setIsLoading] = useState(false);
-    const [moviesList, setMoviesList] = useState([]);
+    const [moviesList, setMoviesList] = useState<any[]>([]);
 
     useEffect(
         function () {

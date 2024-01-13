@@ -2,7 +2,7 @@ import {attachFlags} from "./attachFlags.js"
 import {useTranslate} from "./useTranslate";
 import Loader from "./Loader";
 
-export default function Movie({movie, isShowing, posterImage}) {
+export default function Movie({movie, isShowing, posterImage}: any) {
     const {
         Title: title,
         Poster: poster,
@@ -43,7 +43,7 @@ export default function Movie({movie, isShowing, posterImage}) {
                         <span>{year}</span> • <span>{runtime}</span>
                     </p>
                     {isLoadingGenre ? <Loader/> : <p>{translatedGenre}</p>}
-                    {isLoadingLanguage ? <Loader/> : <p><span className="main-info-content__term">{translatedLanguage.includes(",") ? "Idiomas" : "Idioma"}:</span> {translatedLanguage.toLowerCase()}</p>}
+                    {isLoadingLanguage ? <Loader/> : <p><span className="main-info-content__term">{translatedLanguage.toString().includes(",") ? "Idiomas" : "Idioma"}:</span> {translatedLanguage.toString().toLowerCase()}</p>}
                     <p>{countryPlusFlag}</p>
                     {/*isLoadingCountry ? <Loader/> : <p>{translatedCountry}</p>*/}
                 </div>
