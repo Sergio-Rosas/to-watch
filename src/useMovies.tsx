@@ -40,7 +40,7 @@ export function useMovies() {
 
                 for (let id of ids) {
                     const res = await fetch(
-                        `http://www.omdbapi.com/?apikey=${KEY}&i=${id}`
+                        `https://www.omdbapi.com/?apikey=${KEY}&i=${id}`
                     );
                     const data = await res.json();
                     //console.log(data);
