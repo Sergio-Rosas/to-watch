@@ -40,7 +40,7 @@ h1 {
     font-size: 3.2em;
     line-height: 1.1;
     text-align: center;
-    margin: 3.2rem 1rem
+    margin: 2rem 1rem
 }
 
 button {
@@ -81,6 +81,33 @@ button:focus-visible {
 h2, p {
     line-height: 1.2;
     margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem ;
+    background-color: #2b3035;
+    margin-block-end: 2rem;
+}
+
+.header__button {
+    padding: 0.5rem 0.7rem;
+    background-color: #535bf2;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    list-style-type: none;
+    left: 0;
+    outline: 2px solid orange;
+    padding: 0;
+    margin-block-start: 0.5rem;
 }
 
 .content {
