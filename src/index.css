@@ -125,6 +125,10 @@ h2, p {
     transition: all 300ms ease-in-out;
 }
 
+.card--opaque {
+    filter: grayscale(100%) invert(0.25);
+}
+
 .card:hover {
     box-shadow: 0 0 10px 10px #00000050;
 }

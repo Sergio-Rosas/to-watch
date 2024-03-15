@@ -16,6 +16,8 @@ export default function Movie({movie, isShowing, posterImage}: any) {
         Country: country,
         Type: type,
         totalSeasons,
+        seen,
+        imdbID: id,
     } = movie;
 
     const countryPlusFlag = attachFlags(country.split(", "));
@@ -31,7 +33,8 @@ export default function Movie({movie, isShowing, posterImage}: any) {
     }
 
     return (
-        <div className="card">
+        <div className={`card ${seen && "card--opaque"}`}>
+            <p hidden>{id}</p>
             <div className="main-info">
                 <img className="main-info__image" src={poster} alt="Movie poster" onClick={expanding}/>
                 <div className="main-info-content">
