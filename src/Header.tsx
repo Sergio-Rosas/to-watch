@@ -1,4 +1,4 @@
-import Menu from "./Menu";
+//import Menu from "./Menu";
 // TODO Menu component for filtering.
 export default function Header() {
     return (

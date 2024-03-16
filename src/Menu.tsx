@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-export default function Menu({children, className}) {
+export default function Menu(children: any, className: string) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
