@@ -1,6 +1,7 @@
 import {attachFlags} from "./attachFlags.js"
 import {useTranslate} from "./useTranslate";
 import Loader from "./Loader";
+import Banner from "./Banner";
 
 export default function Movie({movie, isShowing, posterImage}: any) {
     const {
@@ -16,6 +17,10 @@ export default function Movie({movie, isShowing, posterImage}: any) {
         Country: country,
         Type: type,
         totalSeasons,
+        seen,
+        available,
+        netflix,
+        imdbID: id,
     } = movie;
 
     const countryPlusFlag = attachFlags(country.split(", "));
@@ -31,8 +36,10 @@ export default function Movie({movie, isShowing, posterImage}: any) {
     }
 
     return (
-        <div className="card">
+        <div className={`card ${seen && "card--opaque"}`}>
+            <p hidden>{id}</p>
             <div className="main-info">
+                {!seen && available && <Banner className={netflix ? "main-info__banner--red" : available ? "main-info__banner--green" : ""}>{netflix ? "Netflix" : "Disponible"}</Banner>}
                 <img className="main-info__image" src={poster} alt="Movie poster" onClick={expanding}/>
                 <div className="main-info-content">
                     <header>

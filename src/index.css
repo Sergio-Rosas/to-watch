@@ -40,7 +40,7 @@ h1 {
     font-size: 3.2em;
     line-height: 1.1;
     text-align: center;
-    margin: 3.2rem 1rem
+    margin: 2rem 1rem
 }
 
 button {
@@ -83,6 +83,33 @@ h2, p {
     margin: 0;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem ;
+    background-color: #2b3035;
+    margin-block-end: 2rem;
+}
+
+.header__button {
+    padding: 0.5rem 0.7rem;
+    background-color: #535bf2;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    list-style-type: none;
+    left: 0;
+    outline: 2px solid orange;
+    padding: 0;
+    margin-block-start: 0.5rem;
+}
+
 .content {
     display: flex;
     flex-wrap: wrap;
@@ -98,6 +125,10 @@ h2, p {
     transition: all 300ms ease-in-out;
 }
 
+.card--opaque {
+    filter: grayscale(100%) invert(0.25);
+}
+
 .card:hover {
     box-shadow: 0 0 10px 10px #00000050;
 }
@@ -109,11 +140,39 @@ h2, p {
     overflow: hidden;
     column-gap: 0.8rem;
     background-color: #343a40;
+    position: relative;
 }
 
 .main-info__image {
     /*cursor: pointer;*/
     block-size: 100%;
+}
+
+.main-info__banner {
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
+    padding-block: 2px;
+    box-shadow: 6px 6px 5px 0 rgba(0,0,0,0.75);;
+
+    position: absolute;
+    left: -355px;
+    right: 0;
+    top: 25px ;
+
+    transform: rotateZ(-40deg);
+}
+
+.main-info__banner--green {
+    background: linear-gradient(45deg, green, darkgreen);
+}
+
+.main-info__banner--red {
+    background: linear-gradient(45deg, red, darkred);
 }
 
 .main-info-content {

@@ -1,6 +1,7 @@
 import Movie from "./Movie";
 import {useMovies} from "./useMovies";
 import {useState} from "react";
+import Header from "./Header";
 
 export default function Movies() {
     const [movies, isLoading] = useMovies();
@@ -13,7 +14,7 @@ export default function Movies() {
                 isLoading ?
                     <h1>Cargando contenido...</h1> :
                     <>
-                        <h1>🎥 Para Ver</h1>
+                        <Header/>
                         <section className="content">
                             {movies instanceof Array && movies.map((movie) => <Movie movie={movie} isShowing={setIsShowing} posterImage={setPosterImage} key={movie.imdbID}/>)}
                         </section>
