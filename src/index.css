@@ -140,11 +140,39 @@ h2, p {
     overflow: hidden;
     column-gap: 0.8rem;
     background-color: #343a40;
+    position: relative;
 }
 
 .main-info__image {
     /*cursor: pointer;*/
     block-size: 100%;
+}
+
+.main-info__banner {
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
+    padding-block: 2px;
+    box-shadow: 6px 6px 5px 0 rgba(0,0,0,0.75);;
+
+    position: absolute;
+    left: -355px;
+    right: 0;
+    top: 25px ;
+
+    transform: rotateZ(-40deg);
+}
+
+.main-info__banner--green {
+    background: linear-gradient(45deg, green, darkgreen);
+}
+
+.main-info__banner--red {
+    background: linear-gradient(45deg, red, darkred);
 }
 
 .main-info-content {
