@@ -1,4 +1,4 @@
-import {ReactNode, useState} from "react";
+import {useState} from "react";
 
 export default function Menu({children, className}) {
     const [isOpen, setIsOpen] = useState(false);
