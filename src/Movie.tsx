@@ -39,7 +39,7 @@ export default function Movie({movie, isShowing, posterImage}: any) {
         <div className={`card ${seen && "card--opaque"}`}>
             <p hidden>{id}</p>
             <div className="main-info">
-                {!seen && available && <Banner className={netflix ? "main-info__banner--red" : available ? "main-info__banner--green" : ""}>{netflix ? "Netflix" : "Disponible"}</Banner>}
+                {!seen && available && <Banner className={netflix ? "main-info__banner--red" : "main-info__banner--green"}><div>{netflix ? "Netflix" : "Disponible"}</div></Banner>}
                 <img className="main-info__image" src={poster} alt="Movie poster" onClick={expanding}/>
                 <div className="main-info-content">
                     <header>

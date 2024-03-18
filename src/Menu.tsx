@@ -1,11 +1,11 @@
 import {useState} from "react";
 
-export default function Menu(children: any, className: string) {
+export default function Menu(children: string, className: string) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div className={className} onClick={() => setIsOpen(!isOpen)}>
-            {children}
+            children
             {isOpen &&
                 <ul className="menu">
                     <li>Por Defecto</li>
