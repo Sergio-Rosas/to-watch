@@ -23,6 +23,7 @@ export default function Movie({movie, isShowing, posterImage}: any) {
         imdbID: id,
     } = movie;
 
+    //const countryPlusFlag = attachFlags(country === undefined ? "Anguilla" : country.split(", "));
     const countryPlusFlag = attachFlags(country.split(", "));
 
     const [isLoadingPlot, translatedPlot] = useTranslate(plot);
